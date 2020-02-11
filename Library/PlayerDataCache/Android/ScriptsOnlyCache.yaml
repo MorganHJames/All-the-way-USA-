@@ -4,7 +4,6 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.ARFoundation.ARCameraBackground
     - UnityEngine.XR.ARFoundation.ARCameraManager
     - UnityEngine.XR.ARFoundation.ARInputManager
-    - UnityEngine.XR.ARFoundation.ARPlaneManager
     - UnityEngine.XR.ARFoundation.ARSession
     - UnityEngine.XR.ARFoundation.ARSessionOrigin
     UnityEditor.Graphs.dll:
@@ -45,19 +44,17 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10080}
+      Script: {instanceID: 10244}
     - Class: 114
-      Script: {instanceID: 10250}
+      Script: {instanceID: 10938}
     - Class: 114
-      Script: {instanceID: 10952}
+      Script: {instanceID: 11094}
     - Class: 114
-      Script: {instanceID: 11110}
+      Script: {instanceID: 11222}
     - Class: 114
-      Script: {instanceID: 11242}
+      Script: {instanceID: 11382}
     - Class: 114
-      Script: {instanceID: 11408}
-    - Class: 114
-      Script: {instanceID: 11536}
+      Script: {instanceID: 11510}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
