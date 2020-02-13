@@ -64,6 +64,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\KeywordReplace.cs" />
+    <Compile Include="Assets\Editor\Migration\AddVuforiaEnginePackage.cs" />
+    <None Include="Assets\Editor\Vuforia\CylinderTargetTextures\VuforiaMars_Images\authoringinfo.xml" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
@@ -73,47 +75,29 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Subsystem.Registration">
-      <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.ARSubsystems">
-      <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/Unity.XR.ARSubsystems.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.ARCore">
-      <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/Unity.XR.ARCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.ARFoundation.Editor">
-      <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/Unity.XR.ARFoundation.Editor.dll</HintPath>
+    <Reference Include="VuforiaScripts">
+      <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/VuforiaScripts.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.ARFoundation">
-      <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/Unity.XR.ARFoundation.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.ARCore.Editor">
-      <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/Unity.XR.ARCore.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="VuforiaEditorScripts">
+      <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/VuforiaEditorScripts.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
@@ -298,9 +282,6 @@
     <Reference Include="UnityEngine.XRModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/ScriptAssemblies/Assembly-CSharp.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.VR">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
     </Reference>
@@ -339,6 +320,12 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="Vuforia.UnityExtensions.Editor">
+      <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/PackageCache/com.ptc.vuforia.engine@8.6.10/Vuforia/Plugins/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Vuforia.UnityExtensions">
+      <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/PackageCache/com.ptc.vuforia.engine@8.6.10/Vuforia/Plugins/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/morga/Documents/University Level 6/CT6015 - Creative Visualisation and Animation/All the way USA!/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -703,6 +690,12 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{BCDE46EC-BF6E-8A0F-DB7A-1DCF37AEFF01}</Project>
+      <Name>Assembly-CSharp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7079216151345999222}
+  - component: {fileID: 1243353926449129098}
   m_Layer: 0
   m_Name: USA
   m_TagString: Untagged
@@ -80,6 +81,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1243353926449129098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079216151345998985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d59508e375eeb0469b9256d2747ff89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateControllers: []
 --- !u!1001 &2996315442200128943
 PrefabInstance:
   m_ObjectHideFlags: 0

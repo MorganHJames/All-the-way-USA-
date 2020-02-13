@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd2b436336aefe49925d9c90228ead6, type: 3}
+  m_Name: Alaska
+  m_EditorClassIdentifier: 
+  name: Alaska
+  abbreviation: AK
+  birdImage:
+  - {fileID: 21300000, guid: e16a383d2db2b96459011b171b8856bf, type: 3}
+  birdName:
+  - Willow Ptarmigan
+  capital: Juneau
+  flag: {fileID: 21300000, guid: 71df21fdfc3bff249b9687e0523baa39, type: 3}
+  seal: {fileID: 21300000, guid: 86a1467f1b83ba44b814047be7b0ffbe, type: 3}
+  info: "Alaska is a U.S. state in the northwest extremity of the United States West
+    Coast, just across the Bering Strait from Asia. The Canadian province of British
+    Columbia and territory of Yukon border the state to the east and southeast. Its
+    most extreme western part is Attu Island, and it has a maritime border with Russia
+    (Chukotka Autonomous Okrug) to the west across the Bering Strait. To the north
+    are the Chukchi and Beaufort seas\u2014southern parts of the Arctic Ocean. The
+    Pacific Ocean lies to the south and southwest. It is the largest U.S. state by
+    area and the seventh largest subnational division in the world. In addition, it
+    is the 3rd least populous and the most sparsely populated of the 50 United States;
+    nevertheless, it is by far the most populous territory located mostly north of
+    the 60th parallel in North America: its population\u2014estimated at 738,432 by
+    the United States Census Bureau in 2015 \u2014 is more than quadruple the combined
+    populations of Northern Canada and Greenland. Approximately half of Alaska's residents
+    live within the Anchorage metropolitan area. Alaska's economy is dominated by
+    the fishing, natural gas, and oil industries, resources which it has in abundance.
+    United States armed forces bases and tourism are also a significant part of the
+    economy.  On March 30, 1867, the United States purchased Alaska from the Russian
+    Empire for 7.2 million U.S. dollars, or approximately two cents per acre ($4.74/km2).
+    The area went through several administrative changes before becoming organized
+    as a territory on May 11, 1912. It was admitted as the 49th state of the U.S.
+    on January 3, 1959."
