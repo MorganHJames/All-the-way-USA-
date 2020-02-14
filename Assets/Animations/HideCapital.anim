@@ -49,7 +49,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Canvas/Capital
+    path: Captial
   m_FloatCurves: []
   m_PPtrCurves: []
   m_SampleRate: 60
@@ -60,7 +60,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1560425328
+      path: 1229732955
       attribute: 3
       script: {fileID: 0}
       typeID: 4
@@ -122,8 +122,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.x
-    path: Canvas/Capital
-    classID: 224
+    path: Captial
+    classID: 4
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
@@ -159,8 +159,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.y
-    path: Canvas/Capital
-    classID: 224
+    path: Captial
+    classID: 4
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
@@ -196,8 +196,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.z
-    path: Canvas/Capital
-    classID: 224
+    path: Captial
+    classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0

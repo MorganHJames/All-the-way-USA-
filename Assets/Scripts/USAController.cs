@@ -22,15 +22,21 @@ public class USAController : MonoBehaviour
 	[SerializeField] private StateController[] stateControllers;
 
 	/// <summary>
+	/// All of the states touch detectors.
+	/// </summary>
+	[Tooltip("All of the states touch detectors.")]
+	[SerializeField] private TouchDetector[] touchDetectors;
+
+	/// <summary>
 	/// The Name toggle on button.
 	/// </summary>
 	[Tooltip("The Name toggle on button.")]
 	[SerializeField] private Button nameToggleOn;
 
 	/// <summary>
-	/// The Name toggle on button.
+	/// The Name toggle off button.
 	/// </summary>
-	[Tooltip("The Name toggle on button.")]
+	[Tooltip("The Name toggle off button.")]
 	[SerializeField] private Button nameToggleOff;
 
 	/// <summary>
@@ -40,10 +46,22 @@ public class USAController : MonoBehaviour
 	[SerializeField] private Button abbreviationToggleOn;
 
 	/// <summary>
-	/// The abbreviation toggle on button.
+	/// The abbreviation toggle off button.
 	/// </summary>
-	[Tooltip("The abbreviation toggle on button.")]
+	[Tooltip("The abbreviation toggle off button.")]
 	[SerializeField] private Button abbreviationToggleOff;
+
+	/// <summary>
+	/// The capital toggle on button.
+	/// </summary>
+	[Tooltip("The capital toggle on button.")]
+	[SerializeField] private Button capitalToggleOn;
+
+	/// <summary>
+	/// The capital toggle off button.
+	/// </summary>
+	[Tooltip("The capital toggle off button.")]
+	[SerializeField] private Button capitalToggleOff;
 	#endregion
 	#region Public
 
@@ -73,6 +91,25 @@ public class USAController : MonoBehaviour
 				break;
 			default:
 				break;
+		}
+
+		switch (PlayerPrefs.GetInt("StateShowCapital"))
+		{
+			case 0:
+				capitalToggleOn.gameObject.SetActive(false);
+				capitalToggleOff.gameObject.SetActive(true);
+				break;
+			case 1:
+				capitalToggleOn.gameObject.SetActive(true);
+				capitalToggleOff.gameObject.SetActive(false);
+				break;
+			default:
+				break;
+		}
+
+		foreach (TouchDetector touchDetector in touchDetectors)
+		{
+			touchDetector.mouseDownEvent.AddListener(()=> {});
 		}
 	}
 	#endregion
@@ -173,6 +210,38 @@ public class USAController : MonoBehaviour
 		}
 
 		PlayerPrefs.SetInt("StateShowName", 0);
+	}
+
+	/// <summary>
+	/// Turns on the capital city display.
+	/// </summary>
+	public void TurnOnCapitals()
+	{
+		capitalToggleOn.gameObject.SetActive(true);
+		capitalToggleOff.gameObject.SetActive(false);
+
+		foreach (StateController stateController in stateControllers)
+		{
+			stateController.PlayAnimation("ShowCapital", 1);
+		}
+
+		PlayerPrefs.SetInt("StateShowCapital", 1);
+	}
+
+	/// <summary>
+	/// Turns off the capital city display.
+	/// </summary>
+	public void TurnOffCapitals()
+	{
+		capitalToggleOn.gameObject.SetActive(false);
+		capitalToggleOff.gameObject.SetActive(true);
+
+		foreach (StateController stateController in stateControllers)
+		{
+			stateController.PlayAnimation("HideCapital", 1);
+		}
+
+		PlayerPrefs.SetInt("StateShowCapital", 0);
 	}
 	#endregion
 	#endregion

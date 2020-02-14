@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\BillBoardText.cs" />
     <Compile Include="Assets\Scripts\StateController.cs" />
     <Compile Include="Assets\Scripts\StateInfo.cs" />
+    <Compile Include="Assets\Scripts\TouchDetector.cs" />
     <Compile Include="Assets\Scripts\USAController.cs" />
     <Compile Include="Assets\Scripts\ZoomControl.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />

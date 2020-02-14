@@ -44,6 +44,30 @@ public class StateController : MonoBehaviour
 	/// </summary>
 	[Tooltip("The state's capital in world space.")]
 	[SerializeField] private TextMeshProUGUI stateCapitalWorldSpace;
+
+	/// <summary>
+	/// All the different capital meshes.
+	/// </summary>
+	[Tooltip("All the different capital meshes.")]
+	[SerializeField] private Mesh[] capitalMeshes;
+
+	/// <summary>
+	/// The mesh filter for the capital.
+	/// </summary>
+	[Tooltip("The mesh filter for the capital.")]
+	[SerializeField] private MeshFilter capitalMeshFilter;
+
+	/// <summary>
+	/// All the different capital materials.
+	/// </summary>
+	[Tooltip("All the different capital materials.")]
+	[SerializeField] private Material[] capitalMaterials;
+
+	/// <summary>
+	/// The mesh renderer for the capital.
+	/// </summary>
+	[Tooltip("The mesh renderer for the capital.")]
+	[SerializeField] private MeshRenderer captialMeshRenderer;
 	#endregion
 	#region Public
 
@@ -62,6 +86,8 @@ public class StateController : MonoBehaviour
 			stateNameWorldSpace.text = stateInfo.name;
 			stateAbbreviationWorldSpace.text = stateInfo.abbreviation;
 			stateCapitalWorldSpace.text = stateInfo.capital;
+			capitalMeshFilter.mesh = capitalMeshes[Random.Range(0, capitalMeshes.Length)];
+			captialMeshRenderer.material = capitalMaterials[Random.Range(0, capitalMaterials.Length)];
 		}
 
 		switch (PlayerPrefs.GetInt("StateShowName"))
@@ -83,7 +109,7 @@ public class StateController : MonoBehaviour
 			case 0:
 				break;
 			case 1:
-				animator.Play("ShowCapital");
+				animator.Play("ShowCapital", 1);
 				break;
 			default:
 				break;
@@ -95,9 +121,10 @@ public class StateController : MonoBehaviour
 	/// Plays a specific animation.
 	/// </summary>
 	/// <param name="animationToPlay">The animation to play.</param>
-	public void PlayAnimation(string animationToPlay)
+	/// <param name="layer">The animation layer to play from.</param>
+	public void PlayAnimation(string animationToPlay, int layer = 0)
 	{
-		animator.Play(animationToPlay);
+		animator.Play(animationToPlay, layer);
 	}
 	#endregion
 	#endregion
