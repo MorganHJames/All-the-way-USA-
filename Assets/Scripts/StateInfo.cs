@@ -31,18 +31,6 @@ public class StateInfo : ScriptableObject
 	public string abbreviation;
 
 	/// <summary>
-	/// The image of the state's bird.
-	/// </summary>
-	[Tooltip("The image of the state's bird.")]
-	public Sprite[] birdImage;
-
-	/// <summary>
-	/// The state's bird name.
-	/// </summary>
-	[Tooltip("The state's bird name.")]
-	public string[] birdName;
-
-	/// <summary>
 	/// The name of the state's capital city.
 	/// </summary>
 	[Tooltip("The name of the state's capital city.")]
