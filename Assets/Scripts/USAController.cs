@@ -62,9 +62,19 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	[Tooltip("The capital toggle off button.")]
 	[SerializeField] private Button capitalToggleOff;
+
+	/// <summary>
+	/// The info UI animator.
+	/// </summary>
+	[Tooltip("The info UI animator.")]
+	[SerializeField] private Animator infoAnimator;
+
+	/// <summary>
+	/// If the info is shown or not.
+	/// </summary>
+	private bool infoShown = false;
 	#endregion
 	#region Public
-
 	#endregion
 	#endregion
 
@@ -109,11 +119,27 @@ public class USAController : MonoBehaviour
 
 		foreach (TouchDetector touchDetector in touchDetectors)
 		{
-			touchDetector.mouseDownEvent.AddListener(()=> {});
+			touchDetector.mouseDownEvent.AddListener(()=>
+			{
+				if (!infoShown)
+				{
+					infoShown = true;
+					infoAnimator.Play("InfoShow");
+				}
+			});
 		}
 	}
 	#endregion
 	#region Public
+	/// <summary>
+	/// Hides the info UI.
+	/// </summary>
+	public void InfoHide()
+	{
+		infoShown = false;
+		infoAnimator.Play("InfoHide");
+	}
+
 	/// <summary>
 	/// Turns on the state names.
 	/// </summary>
