@@ -935,7 +935,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294020044}
-  m_Mesh: {fileID: 432631465}
+  m_Mesh: {fileID: 436633186}
 --- !u!23 &294020046
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -953,7 +953,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1725652738}
+  - {fileID: 1702766414}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1201,7 +1201,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1334, y: 750}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1265,13 +1265,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dd7ed7987711642acee9705226f644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!43 &432631465
+--- !u!43 &436633186
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ImageTargetMesh13812
+  m_Name: ImageTargetMesh130066
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2052,6 +2052,7 @@ GameObject:
   - component: {fileID: 564272484}
   - component: {fileID: 564272483}
   - component: {fileID: 564272485}
+  - component: {fileID: 564272486}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -2234,6 +2235,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!114 &564272486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564272481}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956de5452b370884c982cd2cad8303a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &568390357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7018008826603166762, guid: 95a3916fb822a8f4fbe9209dbf4dd57f,
@@ -3842,9 +3855,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373efff3b338d4f488c1f4620b53b8c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomOutMin: 0.0002
-  zoomOutMax: 1
-  zoomSpeed: 0.000001
+  zoomOutMin: 0.5
+  zoomOutMax: 4
+  zoomSpeed: 0.05
 --- !u!1 &963762408 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7018008826074745671, guid: 95a3916fb822a8f4fbe9209dbf4dd57f,
@@ -5389,19 +5402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dd7ed7987711642acee9705226f644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1720241058 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8149966911713530234, guid: bd96ec393b948b74c901062e84ce7718,
-    type: 3}
-  m_PrefabInstance: {fileID: 723587607}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!21 &1725652738
+--- !u!21 &1702766414
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -5410,7 +5411,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: 'dollarTargetMaterial
 
-    13822'
+    130076'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -5429,6 +5430,18 @@ Material:
     m_Floats: []
     m_Colors:
     - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
+--- !u!114 &1720241058 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8149966911713530234, guid: bd96ec393b948b74c901062e84ce7718,
+    type: 3}
+  m_PrefabInstance: {fileID: 723587607}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1731821887 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2192928811237755573, guid: 95a3916fb822a8f4fbe9209dbf4dd57f,

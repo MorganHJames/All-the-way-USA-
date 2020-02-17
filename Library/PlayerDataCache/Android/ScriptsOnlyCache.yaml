@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - BillBoardText
     - StateController
     - StateInfo
+    - TouchDetector
     - USAController
     - ZoomControl
     Unity.TextMeshPro.dll:
@@ -15,8 +16,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -24,14 +27,17 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
     Vuforia.UnityExtensions.dll:
-    - Vuforia.AnchorBehaviour
-    - Vuforia.AnchorInputListenerBehaviour
-    - Vuforia.ContentPositioningBehaviour
-    - Vuforia.PlaneFinderBehaviour
+    - Vuforia.ImageTargetBehaviour
+    - Vuforia.TurnOffBehaviour
     - Vuforia.VuforiaBehaviour
     - Vuforia.VuforiaConfiguration
     VuforiaScripts.dll:
@@ -59,6 +65,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -78,15 +86,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9766}
     - Class: 114
+      Script: {instanceID: 9920}
+    - Class: 114
       Script: {instanceID: 9958}
     - Class: 114
-      Script: {instanceID: 10158}
+      Script: {instanceID: 10060}
     - Class: 114
-      Script: {instanceID: 10160}
+      Script: {instanceID: 10188}
     - Class: 114
-      Script: {instanceID: 10166}
-    - Class: 114
-      Script: {instanceID: 10204}
+      Script: {instanceID: 10210}
     - Class: 114
       Script: {instanceID: 10218}
     - Class: 114
@@ -96,31 +104,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10304}
     - Class: 114
+      Script: {instanceID: 10324}
+    - Class: 114
       Script: {instanceID: 10408}
     - Class: 114
       Script: {instanceID: 10428}
     - Class: 114
-      Script: {instanceID: 10674}
+      Script: {instanceID: 10458}
     - Class: 114
-      Script: {instanceID: 10684}
+      Script: {instanceID: 10676}
     - Class: 114
-      Script: {instanceID: 10864}
+      Script: {instanceID: 10686}
     - Class: 114
-      Script: {instanceID: 11138}
+      Script: {instanceID: 10768}
     - Class: 114
-      Script: {instanceID: 11166}
+      Script: {instanceID: 10866}
     - Class: 114
-      Script: {instanceID: 11182}
+      Script: {instanceID: 10954}
     - Class: 114
-      Script: {instanceID: 11344}
+      Script: {instanceID: 11140}
     - Class: 114
-      Script: {instanceID: 11402}
+      Script: {instanceID: 11168}
     - Class: 114
-      Script: {instanceID: 11552}
+      Script: {instanceID: 11184}
     - Class: 114
-      Script: {instanceID: 11670}
+      Script: {instanceID: 11346}
     - Class: 114
-      Script: {instanceID: 11828}
+      Script: {instanceID: 11404}
+    - Class: 114
+      Script: {instanceID: 11554}
+    - Class: 114
+      Script: {instanceID: 11672}
+    - Class: 114
+      Script: {instanceID: 11830}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -542,6 +558,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 5bfa020cd5e351ae3956c6c917a8fd0d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TouchDetector
+  - hash:
+      serializedVersion: 2
       Hash: 0077fc8e4fbae67f80e80ebd534de5a0
     assemblyName: Vuforia.UnityExtensions.dll
     namespaceName: Vuforia
@@ -944,7 +966,7 @@ ScriptsOnlyBuild:
     className: BillBoardText
   - hash:
       serializedVersion: 2
-      Hash: 9657526c9eb94311aa7e618b94e17f27
+      Hash: dcc523c5c896c26358e347d3b9a87027
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StateInfo
@@ -974,7 +996,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: 44b1cfa9655e3535dcd6a1c5dcf8c2c0
+      Hash: a4a8082d8bd0a13a00a5b75fba897d71
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StateController
@@ -1112,7 +1134,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: 06db8959cdfd391f0c98e95cb20ac695
+      Hash: 10407eb95aaa0e00731517b96f02dbd9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: USAController

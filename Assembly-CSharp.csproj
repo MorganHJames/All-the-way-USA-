@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BillBoardText.cs" />
+    <Compile Include="Assets\Scripts\ScrollToTopOnEnable.cs" />
     <Compile Include="Assets\Scripts\StateController.cs" />
     <Compile Include="Assets\Scripts\StateInfo.cs" />
     <Compile Include="Assets\Scripts\TouchDetector.cs" />
