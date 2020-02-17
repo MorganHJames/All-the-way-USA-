@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd2b436336aefe49925d9c90228ead6, type: 3}
+  m_Name: Arizona
+  m_EditorClassIdentifier: 
+  name: Arizona
+  abbreviation: AZ
+  capital: Phoenix
+  flag: {fileID: 21300000, guid: a9f34a9be66ec6d4185f4d6749e62f08, type: 3}
+  seal: {fileID: 21300000, guid: 74f4950792b3d564983658e4d2667316, type: 3}
+  info: "Arizona is a state in the southwestern region of the United States. It is
+    also part of the Western and the Mountain states. It is the 6th largest and the
+    14th most populous of the 50 states. Its capital and largest city is Phoenix.
+    Arizona shares the Four Corners region with Utah, Colorado, and New Mexico; its
+    other neighboring states are Nevada and California to the west and the Mexican
+    states of Sonora and Baja California to the south and southwest.  Arizona is the
+    48th state and last of the contiguous states to be admitted to the Union, achieving
+    statehood on February 14, 1912, coinciding with Valentine's Day. Historically
+    part of the territory of Alta California in New Spain, it became part of independent
+    Mexico in 1821. After being defeated in the Mexican\u2013American War, Mexico
+    ceded much of this territory to the United States in 1848. The southernmost portion
+    of the state was acquired in 1853 through the Gadsden Purchase.  Southern Arizona
+    is known for its desert climate, with very hot summers and mild winters. Northern
+    Arizona features forests of pine, Douglas fir, and spruce trees; the Colorado
+    Plateau; mountain ranges (such as the San Francisco Mountains); as well as large,
+    deep canyons, with much more moderate summer temperatures and significant winter
+    snowfalls. There are ski resorts in the areas of Flagstaff, Alpine, and Tucson.
+    In addition to the internationally known Grand Canyon National Park, which is
+    one of the world's seven natural wonders, there are several national forests,
+    national parks, and national monuments.  About one-quarter of the state is made
+    up of Indian reservations that serve as the home of 27 federally recognized Native
+    American tribes, including the Navajo Nation, the largest in the state and the
+    United States, with more than 300,000 citizens. Although federal law gave all
+    Native Americans the right to vote in 1924, Arizona excluded those living on reservations
+    in the state from voting until the state Supreme Court ruled in favor of Native
+    American plaintiffs in Trujillo v. Garley (1948)."

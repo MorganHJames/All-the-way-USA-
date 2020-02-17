@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd2b436336aefe49925d9c90228ead6, type: 3}
+  m_Name: Delaware
+  m_EditorClassIdentifier: 
+  name: Delaware
+  abbreviation: DE
+  capital: Dover
+  flag: {fileID: 21300000, guid: 3c79d3d9879c9764cab4c0d03733be60, type: 3}
+  seal: {fileID: 21300000, guid: ce9056fcf80583f49b9cf451d58b5972, type: 3}
+  info: Delaware is one of the 50 states of the United States, in the Mid Atlantic
+    region. It is bordered to the south and west by Maryland, north by Pennsylvania,
+    and east by New Jersey and the Atlantic Ocean. The state takes its name from Thomas
+    West, 3rd Baron De La Warr, an English nobleman and Virginia's first colonial
+    governor.  Delaware occupies the northeastern portion of the Delmarva Peninsula
+    and some islands and territory within the Delaware River. It is the second smallest
+    and sixth least populous state, but the sixth most densely populated. Delaware's
+    largest city is Wilmington. The state is divided into three counties, the lowest
+    number of any state. From north to south, they are New Castle County, Kent County,
+    and Sussex County. While the southern two counties have historically been predominantly
+    agricultural, New Castle County is more urbanized.  Before its coastline was explored
+    by Europeans in the 16th century, Delaware was inhabited by several groups of
+    Native Americans, including the Lenape in the north and Nanticoke in the south.
+    It was initially colonized by Dutch traders at Zwaanendael, near the present town
+    of Lewes, in 1631. Delaware was one of the 13 colonies participating in the American
+    Revolution. On December 7, 1787, Delaware became the first state to ratify the
+    Constitution of the United States, and has since been known as "The First State".

@@ -94,8 +94,7 @@ public class StateController : MonoBehaviour
 	/// <summary>
 	/// True when the state is selected.
 	/// </summary>
-	[Tooltip("True when the state is selected.")]
-	public bool selected = false;
+	[HideInInspector] public bool selected = false;
 	#endregion
 	#endregion
 

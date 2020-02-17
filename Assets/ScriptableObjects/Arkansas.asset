@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd2b436336aefe49925d9c90228ead6, type: 3}
+  m_Name: Arkansas
+  m_EditorClassIdentifier: 
+  name: Arkansas
+  abbreviation: AR
+  capital: Little Rock
+  flag: {fileID: 21300000, guid: c45deb20178061b47bfe223aebeffcf6, type: 3}
+  seal: {fileID: 21300000, guid: 3f429fe238c2f114bb219fcc6afa0dc5, type: 3}
+  info: "Little Rock is the capital and most populous city of the U.S. state of Arkansas.
+    As the county seat of Pulaski County, the city was incorporated on November 7,
+    1831, on the south bank of the Arkansas River close to the state's geographic
+    center. The city derives its name from a rock formation along the river, named
+    the \"Little Rock\" (French: La Petite Roche) by the French explorer Jean-Baptiste
+    B\xE9nard de la Harpe in the 1720s. The capital of the Arkansas Territory was
+    moved to Little Rock from Arkansas Post in 1821. The city's population was 197,881
+    in 2018 according to the United States Census Bureau. The six-county Little Rock-North
+    Little Rock-Conway, AR Metropolitan Statistical Area (MSA) is ranked 78th in terms
+    of population in the United States with 738,344 residents according to the 2017
+    estimate by the United States Census Bureau.  Little Rock is a cultural, economic,
+    government, and transportation center within Arkansas and the South. Several cultural
+    institutions are in Little Rock, such as the Arkansas Arts Center, the Arkansas
+    Repertory Theatre, and the Arkansas Symphony Orchestra, in addition to hiking,
+    boating, and other outdoor recreational opportunities. Little Rock's history is
+    available through history museums, historic districts or neighborhoods like the
+    Quapaw Quarter, and historic sites such as Little Rock Central High School. The
+    city is the headquarters of Dillard's, Windstream Communications, Acxiom, Stephens
+    Inc., University of Arkansas for Medical Sciences, Heifer International, Winrock
+    International, the Clinton Foundation, and the Rose Law Firm. Other corporations,
+    such as Dassault Falcon Jet, LM Wind Power, Simmons Bank, Euronet Worldwide, AT&T,
+    and Entergy have large operations in the city. State government is a large employer,
+    with many offices downtown. Two major Interstate highways, Interstate 30 and Interstate
+    40, meet in Little Rock, with the Port of Little Rock serving as a shipping hub."

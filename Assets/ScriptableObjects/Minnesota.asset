@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd2b436336aefe49925d9c90228ead6, type: 3}
+  m_Name: Minnesota
+  m_EditorClassIdentifier: 
+  name: Minnesota
+  abbreviation: MN
+  capital: Saint Paul
+  flag: {fileID: 21300000, guid: f41e9ab6e4990bd4c895f242486641a6, type: 3}
+  seal: {fileID: 21300000, guid: 69408b89879625b46a10f9dafc4d81cb, type: 3}
+  info: "Minnesota is a state in the Upper Midwest, Great Lakes, and northern regions
+    of the United States. Minnesota was admitted as the 32nd U.S. state on May 11,
+    1858, created from the eastern half of the Minnesota Territory. The state has
+    many lakes, and is known as the \"Land of 10,000 Lakes\". Its official motto is
+    L'\xC9toile du Nord (French: Star of the North).  Minnesota is the 12th largest
+    in area and the 22nd most populous of the U.S. states; nearly 55% of its residents
+    live in the Minneapolis\u2013Saint Paul metropolitan area (known as the \"Twin
+    Cities\"). This area has the largest concentration of transportation, business,
+    industry, education, and government in the state. Urban centers in \"Greater Minnesota\"
+    include Duluth, Mankato, Moorhead, Rochester and St. Cloud.  The geography of
+    the state consists of western prairies now given over to intensive agriculture;
+    deciduous forests in the southeast, now partially cleared, farmed, and settled;
+    and the less populated North Woods, used for mining, forestry, and recreation.
+    \ Thousands of years before Europeans arrived, Minnesota was inhabited by various
+    indigenous peoples, some of whom remain in the state today. French explorers,
+    missionaries, and fur traders began exploring the region in the 17th century,
+    encountering the Dakota and Ojibwe/Anishinaabe tribes. Much of what is now Minnesota
+    was part of the vast French holding of Louisiana, which was purchased by the United
+    States in 1803. Following several territorial reorganizations, Minnesota in its
+    current form was admitted as the country's 32nd state on May 11, 1858. Like many
+    Midwestern states, it remained sparsely populated and centered on lumber and agriculture.
+    During the 19th and early 20th centuries, many European immigrants, mainly from
+    Scandinavia and Germany, began to settle the state, which remains a center of
+    Scandinavian American and German American culture.  Immigration from Asia, the
+    Horn of Africa, the Middle East, and (to a lesser extent) Latin America has broadened
+    Minnesota's demographics and culture. Its economy has greatly diversified, shifting
+    from traditional activities such as agriculture and resource extraction to services
+    and finance. Minnesota's standard of living index is among the highest in the
+    United States, and the state is also among the best-educated and wealthiest in
+    the nation."

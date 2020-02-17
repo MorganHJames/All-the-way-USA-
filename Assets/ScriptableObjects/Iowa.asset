@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd2b436336aefe49925d9c90228ead6, type: 3}
+  m_Name: Iowa
+  m_EditorClassIdentifier: 
+  name: Iowa
+  abbreviation: IA
+  capital: Des Moines
+  flag: {fileID: 21300000, guid: f51845437753b734083768a78b0da628, type: 3}
+  seal: {fileID: 21300000, guid: d25e070f832db0349bb26168c6fc1ae1, type: 3}
+  info: 'Iowa is a state in the Midwestern United States, bordered by the Mississippi
+    River to the east and the Missouri River and Big Sioux River to the west. It is
+    bordered by six states: Wisconsin to the northeast, Illinois to the east and southeast,
+    Missouri to the south, Nebraska to the west, South Dakota to the northwest, and
+    Minnesota to the north.  In colonial times, Iowa was a part of French Louisiana
+    and Spanish Louisiana; its state flag is patterned after the flag of France. After
+    the Louisiana Purchase, people laid the foundation for an agriculture-based economy
+    in the heart of the Corn Belt.  In the latter half of the 20th century, Iowa''s
+    agricultural economy made the transition to a diversified economy of advanced
+    manufacturing, processing, financial services, information technology, biotechnology,
+    and green energy production. Iowa is the 26th most extensive in land area and
+    the 30th most populous of the 50 U.S. states. The state''s capital, most populous
+    city, and largest metropolitan area fully located within the state is Des Moines.
+    A portion of the larger Omaha, Nebraska, metropolitan area extends into three
+    counties of southwest Iowa. Iowa has been listed as one of the safest states to
+    live in.'
