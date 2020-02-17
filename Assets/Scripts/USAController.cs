@@ -125,6 +125,17 @@ public class USAController : MonoBehaviour
 				{
 					infoShown = true;
 					infoAnimator.Play("InfoShow");
+					StateController stateController = touchDetector.transform.parent.parent.GetComponent<StateController>();
+					stateController.PlayAnimation("Selected", 2);
+					stateController.selected = true;
+
+					foreach (StateController stateController1 in stateControllers)
+					{
+						if (stateController != stateController1)
+						{
+							stateController1.PlayAnimation("Minimize", 2);
+						}
+					}
 				}
 			});
 		}
@@ -138,6 +149,19 @@ public class USAController : MonoBehaviour
 	{
 		infoShown = false;
 		infoAnimator.Play("InfoHide");
+
+		foreach (StateController stateController in stateControllers)
+		{
+			if (stateController.selected)
+			{
+				stateController.selected = false;
+				stateController.PlayAnimation("Deselected", 2);
+			}
+			else
+			{
+				stateController.PlayAnimation("Maximize", 2);
+			}
+		}
 	}
 
 	/// <summary>

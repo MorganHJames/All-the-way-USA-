@@ -16,12 +16,6 @@ public class StateController : MonoBehaviour
 	#region Variables
 	#region Private
 	/// <summary>
-	/// The state's information.
-	/// </summary>
-	[Tooltip("The state's information.")]
-	[SerializeField] private StateInfo stateInfo;
-
-	/// <summary>
 	/// The state's animator.
 	/// </summary>
 	[Tooltip("The state's animator.")]
@@ -68,9 +62,40 @@ public class StateController : MonoBehaviour
 	/// </summary>
 	[Tooltip("The mesh renderer for the capital.")]
 	[SerializeField] private MeshRenderer captialMeshRenderer;
+
+	/// <summary>
+	/// The percentage to the center of the dollar.
+	/// </summary>
+	[Tooltip("The percentage to the center of the dollar.")]
+	[SerializeField] float percentageToCenter = 0;
+
+	/// <summary>
+	/// Where the state holder starts.
+	/// </summary>
+	private Vector3 startingLocation;
+
+	/// <summary>
+	/// Direction to the center.
+	/// </summary>
+	private Vector3 directionToCenter;
+
+	/// <summary>
+	/// The distance away from the center.
+	/// </summary>
+	private float distanceToCenre;
 	#endregion
 	#region Public
+	/// <summary>
+	/// The state's information.
+	/// </summary>
+	[Tooltip("The state's information.")]
+	public StateInfo stateInfo;
 
+	/// <summary>
+	/// True when the state is selected.
+	/// </summary>
+	[Tooltip("True when the state is selected.")]
+	public bool selected = false;
 	#endregion
 	#endregion
 
@@ -81,6 +106,10 @@ public class StateController : MonoBehaviour
 	/// </summary>
 	private void Start()
 	{
+		startingLocation = transform.parent.localPosition;
+		distanceToCenre = Vector3.Distance(startingLocation, Vector3.zero);
+		directionToCenter = Vector3.Normalize(Vector3.zero - startingLocation);
+
 		if (stateInfo)
 		{
 			stateNameWorldSpace.text = stateInfo.name;
@@ -114,6 +143,15 @@ public class StateController : MonoBehaviour
 			default:
 				break;
 		}
+	}
+
+	/// <summary>
+	/// Moves and scales the holder.
+	/// </summary>
+	private void Update()
+	{
+		transform.parent.localPosition = startingLocation + (directionToCenter * ((distanceToCenre / 100f ) * percentageToCenter));
+		transform.parent.localScale = new Vector3(1f + (percentageToCenter / 25f), 1f + (percentageToCenter / 25f), 1f + (percentageToCenter / 25f));
 	}
 	#endregion
 	#region Public
