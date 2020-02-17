@@ -5,6 +5,7 @@
 // Brief: Controls all of the states.
 //////////////////////////////////////////////////////////// 
 
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -73,6 +74,36 @@ public class USAController : MonoBehaviour
 	/// If the info is shown or not.
 	/// </summary>
 	private bool infoShown = false;
+
+	/// <summary>
+	/// The state name and abbreviation info.
+	/// </summary>
+	[Tooltip("The state name and abbreviation info.")]
+	[SerializeField] private TextMeshProUGUI stateNameAndAbbreviation;
+
+	/// <summary>
+	/// The capital info.
+	/// </summary>
+	[Tooltip("The capital info.")]
+	[SerializeField] private TextMeshProUGUI capitalInfo;
+
+	/// <summary>
+	/// The summary info.
+	/// </summary>
+	[Tooltip("The summary info.")]
+	[SerializeField] private TextMeshProUGUI summaryInfo;
+
+	/// <summary>
+	/// The flag info.
+	/// </summary>
+	[Tooltip("The flag info.")]
+	[SerializeField] private Image flagInfo;
+
+	/// <summary>
+	/// The seal info.
+	/// </summary>
+	[Tooltip("The seal info.")]
+	[SerializeField] private Image sealInfo;
 	#endregion
 	#region Public
 	#endregion
@@ -128,6 +159,15 @@ public class USAController : MonoBehaviour
 					StateController stateController = touchDetector.transform.parent.parent.GetComponent<StateController>();
 					stateController.PlayAnimation("Selected", 2);
 					stateController.selected = true;
+
+					if (stateController.stateInfo)
+					{
+						stateNameAndAbbreviation.text = stateController.stateInfo.name + " (" + stateController.stateInfo.abbreviation + ")";
+						capitalInfo.text = "Capital: " + stateController.stateInfo.capital;
+						flagInfo.sprite = stateController.stateInfo.flag;
+						sealInfo.sprite = stateController.stateInfo.seal;
+						summaryInfo.text = stateController.stateInfo.info;
+					}
 
 					foreach (StateController stateController1 in stateControllers)
 					{

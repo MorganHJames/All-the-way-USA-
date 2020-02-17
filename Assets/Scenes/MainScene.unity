@@ -7574,6 +7574,31 @@ PrefabInstance:
       propertyPath: infoAnimator
       value: 
       objectReference: {fileID: 379256168}
+    - target: {fileID: 1243353926449129098, guid: 95a3916fb822a8f4fbe9209dbf4dd57f,
+        type: 3}
+      propertyPath: stateNameAndAbbreviation
+      value: 
+      objectReference: {fileID: 2123406378}
+    - target: {fileID: 1243353926449129098, guid: 95a3916fb822a8f4fbe9209dbf4dd57f,
+        type: 3}
+      propertyPath: capitalInfo
+      value: 
+      objectReference: {fileID: 730818175}
+    - target: {fileID: 1243353926449129098, guid: 95a3916fb822a8f4fbe9209dbf4dd57f,
+        type: 3}
+      propertyPath: flagInfo
+      value: 
+      objectReference: {fileID: 603844095}
+    - target: {fileID: 1243353926449129098, guid: 95a3916fb822a8f4fbe9209dbf4dd57f,
+        type: 3}
+      propertyPath: sealInfo
+      value: 
+      objectReference: {fileID: 905585227}
+    - target: {fileID: 1243353926449129098, guid: 95a3916fb822a8f4fbe9209dbf4dd57f,
+        type: 3}
+      propertyPath: summaryInfo
+      value: 
+      objectReference: {fileID: 564272483}
     - target: {fileID: 2192928812729256944, guid: 95a3916fb822a8f4fbe9209dbf4dd57f,
         type: 3}
       propertyPath: stateInfo
