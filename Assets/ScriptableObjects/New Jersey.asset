@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd2b436336aefe49925d9c90228ead6, type: 3}
+  m_Name: New Jersey
+  m_EditorClassIdentifier: 
+  name: New Jersey
+  abbreviation: NJ
+  capital: Trenton
+  flag: {fileID: 21300000, guid: e12c06e8ea0e27646b3896edaf424bc0, type: 3}
+  seal: {fileID: 21300000, guid: fd0bba29e55dab34b8e6435fa5663b79, type: 3}
+  info: New Jersey is a state in the Mid-Atlantic region of the Northeastern United
+    States. It is a peninsula, bordered on the north and east by the state of New
+    York; on the east, southeast, and south by the Atlantic Ocean; on the west by
+    the Delaware River and Pennsylvania; and on the southwest by the Delaware Bay
+    and Delaware. New Jersey is the fourth-smallest state by area but the 11th-most
+    populous, with 9 million residents as of 2017, making it the most densely populated
+    of the 50 U.S. states with its biggest city being Newark. New Jersey lies completely
+    within the combined statistical areas of New York City and Philadelphia. New Jersey
+    was the second-wealthiest U.S. state by median household income as of 2017.  New
+    Jersey was inhabited by Native Americans for more than 2,800 years, with historical
+    tribes such as the Lenape along the coast. In the early 17th century, the Dutch
+    and the Swedes founded the first European settlements in the state. The English
+    later seized control of the region, naming it the Province of New Jersey after
+    the largest of the Channel Islands, Jersey, and granting it as a colony to Sir
+    George Carteret and John Berkeley, 1st Baron Berkeley of Stratton. New Jersey
+    was the site of several important battles during the American Revolutionary War
+    in the 18th century.  In the 19th century, factories in the cities Camden, Paterson,
+    Newark, Trenton, Jersey City, and Elizabeth (known as the "Big Six"), helped drive
+    the Industrial Revolution. New Jersey's geographic location at the center of the
+    Northeast megalopolis, between Boston and New York City to the northeast, and
+    Philadelphia, Baltimore, and Washington, D.C., to the southwest, fueled its rapid
+    growth through the process of suburbanization in the second half of the 20th century.
+    At the turn of the 21st century, this suburbanization began reverting with the
+    consolidation of New Jersey's culturally diverse populace toward more urban settings
+    within the state, with towns home to commuter rail stations outpacing the population
+    growth of more automobile-oriented suburbs since 2008.  As of 2018, New Jersey
+    was home to the highest number of millionaires per capita of all U.S. states.
+    New Jersey's public school system consistently ranks at or among the top of all
+    fifty U.S. states.

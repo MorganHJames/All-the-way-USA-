@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd2b436336aefe49925d9c90228ead6, type: 3}
+  m_Name: Wisconsin
+  m_EditorClassIdentifier: 
+  name: Wisconsin
+  abbreviation: WI
+  capital: Madison
+  flag: {fileID: 21300000, guid: fd8564aa4a53f3246971461a297ec98e, type: 3}
+  seal: {fileID: 21300000, guid: 30dd166933f99a04295612be065d3cc7, type: 3}
+  info: Wisconsin is a U.S. state located in the north-central, Midwest and Great
+    Lakes regions of the country. It is bordered by Minnesota to the west, Iowa to
+    the southwest, Illinois to the south, Lake Michigan to the east, Michigan to the
+    northeast, and Lake Superior to the north. Wisconsin is the 23rd largest state
+    by total area and the 20th most populous. The state capital is Madison, and its
+    largest city is Milwaukee, which is located on the western shore of Lake Michigan.
+    The state is divided into 72 counties.  Wisconsin's geography is diverse, having
+    been greatly impacted by glaciers during the Ice Age with the exception of the
+    Driftless Area. The Northern Highland and Western Upland along with a part of
+    the Central Plain occupies the western part of the state, with lowlands stretching
+    to the shore of Lake Michigan. Wisconsin is second to Michigan in the length of
+    its Great Lakes coastline.  During the 19th and early 20th centuries, many European
+    settlers entered the state, many of whom emigrated from Germany and Scandinavia.
+    Like neighboring Minnesota, the state remains a center of German American and
+    Scandinavian American culture.  The state is one of the nation's leading dairy
+    producers and is known as "America's Dairyland"; it is particularly famous for
+    its cheese. Manufacturing (especially paper products), information technology
+    (IT), cranberries, ginseng, and tourism are also major contributors to the state's
+    economy.

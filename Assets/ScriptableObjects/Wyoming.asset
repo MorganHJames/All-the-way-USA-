@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd2b436336aefe49925d9c90228ead6, type: 3}
+  m_Name: Wyoming
+  m_EditorClassIdentifier: 
+  name: Wyoming
+  abbreviation: WY
+  capital: Cheyenne
+  flag: {fileID: 21300000, guid: 0cb553a93ebf3f74aa5c3be6ded93163, type: 3}
+  seal: {fileID: 21300000, guid: 39280da24cefd674787ab747aba4a503, type: 3}
+  info: "Wyoming is a state in the mountain region of the Western United States. The
+    state is the 10th largest by area, the least populous, and the second most sparsely
+    populated state in the country. Wyoming is bordered on the north by Montana, on
+    the east by South Dakota and Nebraska, on the south by Colorado, on the southwest
+    by Utah, and on the west by Idaho and Montana. The state population was estimated
+    at 577,737 in 2018, which is less than 31 of the most populous U.S. cities including
+    Denver in neighboring Colorado. Cheyenne is the state capital and the most populous
+    city, with an estimated population of 63,624 in 2017.  The western two-thirds
+    of the state is covered mostly by the mountain ranges and rangelands of the Rocky
+    Mountains, while the eastern third of the state is high elevation prairie called
+    the High Plains. Almost half of the land in Wyoming is owned by the U.S. government,
+    leading Wyoming to rank sixth by area and fifth by proportion of a state's land
+    owned by the federal government. Federal lands include two national parks\u2014Grand
+    Teton and Yellowstone\u2014two national recreation areas, two national monuments,
+    several national forests, historic sites, fish hatcheries, and wildlife refuges.
+    \ Original inhabitants of the region include the Crow, Arapaho, Lakota, and Shoshone.
+    Southwestern Wyoming was claimed by the Spanish Empire and then Mexican territory
+    until it was ceded to the United States in 1848 at the end of the Mexican\u2013American
+    War. The region acquired the name Wyoming when a bill was introduced to the U.S.
+    Congress in 1865 to provide a \"temporary government for the territory of Wyoming\".
+    The name was used earlier for the Wyoming Valley in Pennsylvania, and is derived
+    from the Munsee word xw\xE9:wam\u0259nk, meaning \"at the big river flat\".  The
+    main drivers of Wyoming's economy are mineral extraction\u2014mostly coal, oil,
+    natural gas, and trona\u2014and tourism. Agricultural commodities include livestock
+    (beef), hay, sugar beets, grain (wheat and barley), and wool. The climate is semi-arid
+    and continental, drier and windier than the rest of the U.S., with greater temperature
+    extremes.  Wyoming has been a politically conservative state since the 1950s,
+    with the Republican Party candidate winning every presidential election except
+    that of 1964."

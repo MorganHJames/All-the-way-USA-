@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd2b436336aefe49925d9c90228ead6, type: 3}
+  m_Name: Montana
+  m_EditorClassIdentifier: 
+  name: Montana
+  abbreviation: MT
+  capital: Helena
+  flag: {fileID: 21300000, guid: d73c2089dab92c942b1c517438046485, type: 3}
+  seal: {fileID: 21300000, guid: 1edbd9567c3e43945842509ff3ede2c8, type: 3}
+  info: Montana is a state in the Northwestern United States. Montana has several
+    nicknames, although none are official, including "Big Sky Country" and "The Treasure
+    State", and slogans that include "Land of the Shining Mountains" and more recently
+    "The Last Best Place".  Montana is the fourth-largest in area, the 8th least populous,
+    and the third-least densely populated of the 50 U.S. states. The western half
+    of Montana contains numerous mountain ranges. Smaller island ranges are found
+    throughout the state. In all, 77 named ranges are part of the Rocky Mountains.
+    The eastern half of Montana is characterized by western prairie terrain and badlands.
+    Montana is bordered by Idaho to the west, Wyoming to the south, North Dakota and
+    South Dakota to the east, and the Canadian provinces of British Columbia, Alberta,
+    and Saskatchewan to the north.  The economy is primarily based on agriculture,
+    including ranching and cereal grain farming. Other significant economic resources
+    include oil, gas, coal, hard rock mining, and lumber. The health care, service,
+    and government sectors also are significant to the state's economy.  The state's
+    fastest-growing sector is tourism. Nearly 13 million tourists annually visit Glacier
+    National Park, Yellowstone National Park, Beartooth Highway, Flathead Lake, Big
+    Sky Resort, and other attractions.

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd2b436336aefe49925d9c90228ead6, type: 3}
+  m_Name: Utah
+  m_EditorClassIdentifier: 
+  name: Utah
+  abbreviation: UT
+  capital: Salt Lake City
+  flag: {fileID: 21300000, guid: 7727b1ebd4338dc4f9bf312bc2de1b0b, type: 3}
+  seal: {fileID: 21300000, guid: beb8477187f8cf94596677faec688bb6, type: 3}
+  info: 'Utah is a state in the western United States. It became the 45th state admitted
+    to the U.S. on January 4, 1896. Utah is the 13th-largest by area, 30th-most-populous,
+    and 11th-least-densely populated of the 50 United States. Utah has a population
+    of more than 3 million according to the Census estimate for July 1, 2018. Urban
+    development is mostly concentrated in two areas: the Wasatch Front in the north-central
+    part of the state, which contains approximately 2.5 million people; and Washington
+    County in Southern Utah, with over 160,000 residents. Utah is bordered by Colorado
+    to the east, Wyoming to the northeast, Idaho to the north, Arizona to the south,
+    and Nevada to the west. It also touches a corner of New Mexico in the southeast.  Approximately
+    62% of Utahns are reported to be members of the Church of Jesus Christ of Latter-day
+    Saints (LDS Church), making Utah the only state with a majority population belonging
+    to a single church. This greatly influences Utahn culture, politics, and daily
+    life. The church''s world headquarters is located in Salt Lake City.  The state
+    is a center of transportation, education, information technology and research,
+    government services, and mining and a major tourist destination for outdoor recreation.
+    In 2013, the U.S. Census Bureau estimated that Utah had the second-fastest-growing
+    population of any state. St. George was the fastest-growing metropolitan area
+    in the United States from 2000 to 2005. Utah also has the 14th-highest median
+    average income and the least income inequality of any U.S. state. A 2012 Gallup
+    national survey found Utah overall to be the "best state to live in the future"
+    based on 13 forward-looking measurements including various economic, lifestyle,
+    and health-related outlook metrics.'

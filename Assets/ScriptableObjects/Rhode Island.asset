@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd2b436336aefe49925d9c90228ead6, type: 3}
+  m_Name: Rhode Island
+  m_EditorClassIdentifier: 
+  name: Rhode Island
+  abbreviation: RI
+  capital: Providence
+  flag: {fileID: 21300000, guid: 41395c74f93cb674e973c06720bee999, type: 3}
+  seal: {fileID: 21300000, guid: 4bf11897b4036eb41b6cfaf8de8a30a9, type: 3}
+  info: Rhode Island, officially the State of Rhode Island and Providence Plantations,
+    is a state in the New England region of the United States. It is the smallest
+    U.S. state by area and the seventh least populous, but it is also the second most
+    densely populated. Rhode Island is bordered by Connecticut to the west, Massachusetts
+    to the north and east, and the Atlantic Ocean to the south via Rhode Island Sound
+    and Block Island Sound. It also shares a small maritime border with New York.
+    Providence is the state capital and most populous city in Rhode Island.  On May
+    4, 1776, the Colony of Rhode Island was the first of the Thirteen Colonies to
+    renounce its allegiance to the British Crown, and it was the fourth among the
+    newly independent states to ratify the Articles of Confederation on February 9,
+    1778. The state boycotted the 1787 convention which drew up the United States
+    Constitution and initially refused to ratify it; it was the last of the original
+    13 states to do so on May 29, 1790.  Rhode Island's official nickname is "The
+    Ocean State", a reference to the large bays and inlets that amount to about 14
+    percent of its total area.

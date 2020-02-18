@@ -117,6 +117,11 @@ public class StateController : MonoBehaviour
 			capitalMeshFilter.mesh = capitalMeshes[Random.Range(0, capitalMeshes.Length)];
 			captialMeshRenderer.material = capitalMaterials[Random.Range(0, capitalMaterials.Length)];
 		}
+		else
+		{
+			Debug.Log("State controller is missing state info - Self destructing!");
+			Destroy(gameObject);
+		}
 
 		switch (PlayerPrefs.GetInt("StateShowName"))
 		{
