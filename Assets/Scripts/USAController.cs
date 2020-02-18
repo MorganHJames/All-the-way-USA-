@@ -299,7 +299,7 @@ public class USAController : MonoBehaviour
 			stateController.PlayAnimation("HideAbbreviation");
 		}
 
-		PlayerPrefs.SetInt("StateShowName", 0);
+		PlayerPrefs.SetInt("StateShowName", 2);
 	}
 
 	/// <summary>
