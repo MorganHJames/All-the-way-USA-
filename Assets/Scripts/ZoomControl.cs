@@ -42,6 +42,18 @@ public class ZoomControl : MonoBehaviour
 	#region Methods
 	#region Private
 	/// <summary>
+	/// Sets the size of the model to the previous size.
+	/// </summary>
+	private void Start()
+	{
+		if (PlayerPrefs.HasKey("Scale"))
+		{
+			float scale = PlayerPrefs.GetFloat("Scale");
+			transform.localScale = new Vector3(scale, scale, scale);
+		}
+	}
+
+	/// <summary>
 	/// Allows the model to scale up or down.
 	/// </summary>
 	private void Update()
@@ -83,6 +95,7 @@ public class ZoomControl : MonoBehaviour
 		if (!(transform.localScale.x + increment > zoomOutMax) && !(transform.localScale.x + increment < zoomOutMin))
 		{
 			transform.localScale += new Vector3(increment, increment, increment);
+			PlayerPrefs.SetFloat("Scale", transform.localScale.x);
 		}
 	}
 	#endregion
