@@ -155,7 +155,11 @@ public class StateController : MonoBehaviour
 	private void Update()
 	{
 		transform.parent.localPosition = startingLocation + (directionToCenter * ((distanceToCenre / 100f ) * percentageToCenter));
-		transform.parent.localScale = new Vector3(1f + (percentageToCenter / 25f), 1f + (percentageToCenter / 25f), 1f + (percentageToCenter / 25f));
+
+		if (!USAController.testing)
+		{
+			transform.parent.localScale = new Vector3(1f + (percentageToCenter / 25f), 1f + (percentageToCenter / 25f), 1f + (percentageToCenter / 25f));
+		}
 	}
 	#endregion
 	#region Public

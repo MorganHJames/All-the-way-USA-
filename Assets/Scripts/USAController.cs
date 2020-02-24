@@ -71,6 +71,12 @@ public class USAController : MonoBehaviour
 	[SerializeField] private Animator infoAnimator;
 
 	/// <summary>
+	/// The test UI animator.
+	/// </summary>
+	[Tooltip("The test UI animator.")]
+	[SerializeField] private Animator testAnimator;
+
+	/// <summary>
 	/// If the info is shown or not.
 	/// </summary>
 	private bool infoShown = false;
@@ -104,8 +110,47 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	[Tooltip("The seal info.")]
 	[SerializeField] private Image sealInfo;
+
+	/// <summary>
+	/// The current test type.
+	/// </summary>
+	private TestType currentTestType = TestType.None;
+
+	/// <summary>
+	/// The different test types.
+	/// </summary>
+	private enum TestType
+	{
+		Name,
+		Capital,
+		Flag,
+		None
+	}
+
+	/// <summary>
+	/// The name test score.
+	/// </summary>
+	[Tooltip("The name test score.")]
+	[SerializeField] private TextMeshProUGUI nameTestScore;
+
+	/// <summary>
+	/// The capital test score.
+	/// </summary>
+	[Tooltip("The capital test score.")]
+	[SerializeField] private TextMeshProUGUI capitalTestScore;
+
+	/// <summary>
+	/// The flag test score.
+	/// </summary>
+	[Tooltip("The flag test score.")]
+	[SerializeField] private TextMeshProUGUI flagTestScore;
 	#endregion
 	#region Public
+	/// <summary>
+	/// Is the user taking a test?
+	/// </summary>
+	[Tooltip("Is the user taking a test?")]
+	static public bool testing = false;
 	#endregion
 	#endregion
 
@@ -116,6 +161,12 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	private void Start()
 	{
+		nameTestScore.text = "" + PlayerPrefs.GetInt("NameTestScore");
+
+		capitalTestScore.text = "" + PlayerPrefs.GetInt("CapitalTestScore");
+
+		flagTestScore.text = "" + PlayerPrefs.GetInt("FlagTestScore");
+
 		switch (PlayerPrefs.GetInt("StateShowName"))
 		{
 			case 0:
@@ -179,6 +230,30 @@ public class USAController : MonoBehaviour
 				}
 			});
 		}
+	}
+
+	/// <summary>
+	/// Start a test.
+	/// </summary>
+	/// <param name="test">The test type to set the controller to.</param>
+	private void StartTesting(TestType test)
+	{
+		currentTestType = test;
+		testing = true;
+		testAnimator.Play("StartTest");
+
+		foreach (StateController stateController in stateControllers)
+		{
+			stateController.PlayAnimation("Separate", 2);
+		}
+	}
+
+	/// <summary>
+	/// Turns of the testing boolean.
+	/// </summary>
+	private void TurnOffTesting()
+	{
+		testing = false;
 	}
 	#endregion
 	#region Public
@@ -332,6 +407,45 @@ public class USAController : MonoBehaviour
 		}
 
 		PlayerPrefs.SetInt("StateShowCapital", 0);
+	}
+
+	/// <summary>
+	/// Starts the test about the state names.
+	/// </summary>
+	public void TestName()
+	{
+		StartTesting(TestType.Name);
+	}
+
+	/// <summary>
+	/// Starts the test about the state capitals.
+	/// </summary>
+	public void TestCapital()
+	{
+		StartTesting(TestType.Capital);
+	}
+
+	/// <summary>
+	/// Starts the test about the state flags.
+	/// </summary>
+	public void TestFlag()
+	{
+		StartTesting(TestType.Flag);
+	}
+
+	/// <summary>
+	/// Stops the current test.
+	/// </summary>
+	public void StopTest()
+	{
+		currentTestType = TestType.None;
+		Invoke("TurnOffTesting", 0.25f);
+		testAnimator.Play("StopTest");
+
+		foreach (StateController stateController in stateControllers)
+		{
+			stateController.PlayAnimation("Unseparate", 2);
+		}
 	}
 	#endregion
 	#endregion
