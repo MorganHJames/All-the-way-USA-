@@ -17,8 +17,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -83,61 +85,61 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9766}
+      Script: {instanceID: 9786}
     - Class: 114
-      Script: {instanceID: 9920}
+      Script: {instanceID: 9940}
     - Class: 114
-      Script: {instanceID: 9958}
+      Script: {instanceID: 9978}
     - Class: 114
-      Script: {instanceID: 10060}
+      Script: {instanceID: 10080}
     - Class: 114
-      Script: {instanceID: 10188}
+      Script: {instanceID: 10208}
     - Class: 114
-      Script: {instanceID: 10210}
+      Script: {instanceID: 10230}
     - Class: 114
-      Script: {instanceID: 10218}
+      Script: {instanceID: 10238}
     - Class: 114
-      Script: {instanceID: 10220}
+      Script: {instanceID: 10240}
     - Class: 114
-      Script: {instanceID: 10300}
-    - Class: 114
-      Script: {instanceID: 10304}
+      Script: {instanceID: 10320}
     - Class: 114
       Script: {instanceID: 10324}
     - Class: 114
-      Script: {instanceID: 10408}
+      Script: {instanceID: 10344}
     - Class: 114
       Script: {instanceID: 10428}
     - Class: 114
-      Script: {instanceID: 10446}
+      Script: {instanceID: 10448}
     - Class: 114
-      Script: {instanceID: 10460}
+      Script: {instanceID: 10466}
     - Class: 114
-      Script: {instanceID: 10678}
+      Script: {instanceID: 10480}
     - Class: 114
-      Script: {instanceID: 10688}
+      Script: {instanceID: 10698}
     - Class: 114
-      Script: {instanceID: 10770}
+      Script: {instanceID: 10708}
     - Class: 114
-      Script: {instanceID: 10868}
+      Script: {instanceID: 10790}
     - Class: 114
-      Script: {instanceID: 10956}
+      Script: {instanceID: 10888}
     - Class: 114
-      Script: {instanceID: 11142}
+      Script: {instanceID: 10976}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11162}
     - Class: 114
-      Script: {instanceID: 11186}
+      Script: {instanceID: 11190}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11206}
     - Class: 114
-      Script: {instanceID: 11406}
+      Script: {instanceID: 11368}
     - Class: 114
-      Script: {instanceID: 11556}
+      Script: {instanceID: 11426}
     - Class: 114
-      Script: {instanceID: 11674}
+      Script: {instanceID: 11576}
     - Class: 114
-      Script: {instanceID: 11832}
+      Script: {instanceID: 11694}
+    - Class: 114
+      Script: {instanceID: 11852}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1141,7 +1143,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: 6783fe8942a85cdd497d45bd1c67e80f
+      Hash: 89ccd23f3c83ff8550fd5150c152b818
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: USAController

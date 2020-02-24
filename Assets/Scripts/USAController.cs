@@ -6,6 +6,8 @@
 //////////////////////////////////////////////////////////// 
 
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,6 +24,26 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	[Tooltip("All of the state controllers.")]
 	[SerializeField] private StateController[] stateControllers;
+
+	/// <summary>
+	/// The test state controllers.
+	/// </summary>
+	private List<StateController> testStateControllers = new List<StateController>();
+
+	/// <summary>
+	/// The current Question.
+	/// </summary>
+	private int currentQuestion = 0;
+
+	/// <summary>
+	/// The amount of correct answers.
+	/// </summary>
+	private int correctAnswers = 0;
+
+	/// <summary>
+	/// The correct answer.
+	/// </summary>
+	private StateController correctStateController = null;
 
 	/// <summary>
 	/// All of the states touch detectors.
@@ -89,6 +111,12 @@ public class USAController : MonoBehaviour
 	[SerializeField] private TextMeshProUGUI stateNameAndAbbreviation;
 
 	/// <summary>
+	/// The state name and capital test.
+	/// </summary>
+	[Tooltip("The state name and capital test.")]
+	[SerializeField] private TextMeshProUGUI stateNameAndCapitalTest;
+
+	/// <summary>
 	/// The capital info.
 	/// </summary>
 	[Tooltip("The capital info.")]
@@ -105,6 +133,12 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	[Tooltip("The flag info.")]
 	[SerializeField] private Image flagInfo;
+
+	/// <summary>
+	/// The flag test.
+	/// </summary>
+	[Tooltip("The flag test.")]
+	[SerializeField] private Image flagTest;
 
 	/// <summary>
 	/// The seal info.
@@ -145,6 +179,24 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	[Tooltip("The flag test score.")]
 	[SerializeField] private TextMeshProUGUI flagTestScore;
+
+	/// <summary>
+	/// The correct material.
+	/// </summary>
+	[Tooltip("The correct material.")]
+	[SerializeField] private Material correctMaterial;
+
+	/// <summary>
+	/// The incorrect material.
+	/// </summary>
+	[Tooltip("The incorrect material.")]
+	[SerializeField] private Material incorrectMaterial;
+
+	/// <summary>
+	/// The state material.
+	/// </summary>
+	[Tooltip("The state material.")]
+	[SerializeField] private Material stateMaterial;
 	#endregion
 	#region Public
 	/// <summary>
@@ -229,6 +281,38 @@ public class USAController : MonoBehaviour
 						}
 					}
 				}
+				else if (!infoShown && testing && !touchDetector.GetComponent<MeshRenderer>().sharedMaterial.Equals(correctMaterial) && !touchDetector.GetComponent<MeshRenderer>().sharedMaterial.Equals(incorrectMaterial))
+				{
+					if (AnswerQuestion(touchDetector.transform.parent.parent.GetComponent<StateController>()))
+					{
+						// Set color to green.
+						touchDetector.GetComponent<MeshRenderer>().material = correctMaterial;
+
+						bool gotAnswerRightFirstTime = true;
+
+						int count = 0;
+
+						foreach (TouchDetector touchDetector1 in touchDetectors)
+						{
+							count++;
+							if (touchDetector1.GetComponent<MeshRenderer>().sharedMaterial.Equals(incorrectMaterial))
+							{
+								touchDetector1.GetComponent<MeshRenderer>().material = stateMaterial;
+								gotAnswerRightFirstTime = false;
+							}
+						}
+
+						if (gotAnswerRightFirstTime)
+						{
+							correctAnswers++;
+						}
+					}
+					else
+					{
+						// Set color the red.
+						touchDetector.GetComponent<MeshRenderer>().material = incorrectMaterial;
+					}
+				}
 			});
 		}
 	}
@@ -278,6 +362,35 @@ public class USAController : MonoBehaviour
 					break;
 			}
 		}
+
+		//Create list of state controllers in random order.
+		testStateControllers = stateControllers.ToList();
+		testStateControllers = testStateControllers.OrderBy(x => Random.value).ToList();
+
+		//Set the question number to 0.
+		currentQuestion = 0;
+
+		//Reset correct amount.
+		correctAnswers = 0;
+
+		NextQuesiton();
+
+		switch (currentTestType)
+		{
+			case TestType.Name:
+				testAnimator.Play("ShowText", 1);
+				break;
+			case TestType.Capital:
+				testAnimator.Play("ShowText", 1);
+				break;
+			case TestType.Flag:
+				testAnimator.Play("ShowFlag", 1);
+				break;
+			case TestType.None:
+				break;
+			default:
+				break;
+		}
 	}
 
 	/// <summary>
@@ -286,6 +399,58 @@ public class USAController : MonoBehaviour
 	private void TurnOffTesting()
 	{
 		testing = false;
+	}
+
+	/// <summary>
+	/// Answers the current question on the screen.
+	/// </summary>
+	/// <param name="stateController">The answer to the question.</param>
+	/// <returns></returns>
+	private bool AnswerQuestion(StateController stateController)
+	{
+		if (stateController == correctStateController)
+		{
+			NextQuesiton();
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	/// <summary>
+	/// Shows the next question on the screen.
+	/// </summary>
+	private void NextQuesiton()
+	{
+		if (currentQuestion < 50)
+		{
+			correctStateController = testStateControllers[currentQuestion];
+
+			switch (currentTestType)
+			{
+				case TestType.Name:
+					stateNameAndCapitalTest.text = correctStateController.stateInfo.name;
+					break;
+				case TestType.Capital:
+					stateNameAndCapitalTest.text = correctStateController.stateInfo.capital;
+					break;
+				case TestType.Flag:
+					flagTest.sprite = correctStateController.stateInfo.flag;
+					break;
+				case TestType.None:
+					break;
+				default:
+					break;
+			}
+		}
+		else
+		{
+			StopTest();
+		}
+
+		currentQuestion++;
 	}
 	#endregion
 	#region Public
@@ -470,7 +635,40 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	public void StopTest()
 	{
+		switch (currentTestType)
+		{
+			case TestType.Name:
+				if (correctAnswers > PlayerPrefs.GetInt("NameTestScore"))
+				{
+					PlayerPrefs.SetInt("NameTestScore", correctAnswers);
+					nameTestScore.text = "" + correctAnswers;
+				}
+				testAnimator.Play("HideText", 1);
+				break;
+			case TestType.Capital:
+				if (correctAnswers > PlayerPrefs.GetInt("CapitalTestScore"))
+				{
+					PlayerPrefs.SetInt("CapitalTestScore", correctAnswers);
+					nameTestScore.text = "" + correctAnswers;
+				}
+				testAnimator.Play("HideText", 1);
+				break;
+			case TestType.Flag:
+				if (correctAnswers > PlayerPrefs.GetInt("FlagTestScore"))
+				{
+					PlayerPrefs.SetInt("FlagTestScore", correctAnswers);
+					nameTestScore.text = "" + correctAnswers;
+				}
+				testAnimator.Play("HideFlag", 1);
+				break;
+			case TestType.None:
+				break;
+			default:
+				break;
+		}
+
 		currentTestType = TestType.None;
+
 		Invoke("TurnOffTesting", 0.25f);
 		testAnimator.Play("StopTest");
 
@@ -502,6 +700,11 @@ public class USAController : MonoBehaviour
 				default:
 					break;
 			}
+		}
+
+		foreach (TouchDetector touchDetector in touchDetectors)
+		{
+			touchDetector.GetComponent<MeshRenderer>().material = stateMaterial;
 		}
 	}
 	#endregion
