@@ -5,6 +5,7 @@
 // Brief: Controls all of the states.
 //////////////////////////////////////////////////////////// 
 
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -203,7 +204,7 @@ public class USAController : MonoBehaviour
 		{
 			touchDetector.mouseDownEvent.AddListener(()=>
 			{
-				if (!infoShown)
+				if (!infoShown && !testing)
 				{
 					infoShown = true;
 					infoAnimator.Play("InfoShow");
@@ -236,8 +237,14 @@ public class USAController : MonoBehaviour
 	/// Start a test.
 	/// </summary>
 	/// <param name="test">The test type to set the controller to.</param>
-	private void StartTesting(TestType test)
+	private IEnumerator StartTesting(TestType test)
 	{
+		if (infoShown)
+		{
+			InfoHide();
+			yield return new WaitForSeconds(0.25f);
+		}
+
 		currentTestType = test;
 		testing = true;
 		testAnimator.Play("StartTest");
@@ -245,6 +252,31 @@ public class USAController : MonoBehaviour
 		foreach (StateController stateController in stateControllers)
 		{
 			stateController.PlayAnimation("Separate", 2);
+
+			switch (PlayerPrefs.GetInt("StateShowName"))
+			{
+				case 0:
+					stateController.PlayAnimation("HideName");
+					break;
+				case 1:
+					stateController.PlayAnimation("HideAbbreviation");
+					break;
+				case 2:
+					break;
+				default:
+					break;
+			}
+
+			switch (PlayerPrefs.GetInt("StateShowCapital"))
+			{
+				case 0:
+					break;
+				case 1:
+					stateController.PlayAnimation("HideCapital", 1);
+					break;
+				default:
+					break;
+			}
 		}
 	}
 
@@ -414,7 +446,7 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	public void TestName()
 	{
-		StartTesting(TestType.Name);
+		StartCoroutine(StartTesting(TestType.Name));
 	}
 
 	/// <summary>
@@ -422,7 +454,7 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	public void TestCapital()
 	{
-		StartTesting(TestType.Capital);
+		StartCoroutine(StartTesting(TestType.Capital));
 	}
 
 	/// <summary>
@@ -430,7 +462,7 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	public void TestFlag()
 	{
-		StartTesting(TestType.Flag);
+		StartCoroutine(StartTesting(TestType.Flag));
 	}
 
 	/// <summary>
@@ -445,6 +477,31 @@ public class USAController : MonoBehaviour
 		foreach (StateController stateController in stateControllers)
 		{
 			stateController.PlayAnimation("Unseparate", 2);
+
+			switch (PlayerPrefs.GetInt("StateShowName"))
+			{
+				case 0:
+					stateController.PlayAnimation("ShowName");
+					break;
+				case 1:
+					stateController.PlayAnimation("ShowAbbreviation");
+					break;
+				case 2:
+					break;
+				default:
+					break;
+			}
+
+			switch (PlayerPrefs.GetInt("StateShowCapital"))
+			{
+				case 0:
+					break;
+				case 1:
+					stateController.PlayAnimation("ShowCapital", 1);
+					break;
+				default:
+					break;
+			}
 		}
 	}
 	#endregion
