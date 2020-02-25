@@ -279,11 +279,14 @@ public class USAController : MonoBehaviour
 							stateController1.PlayAnimation("Minimize", 2);
 						}
 					}
+
+					AudioManager.instance.PlayOneShot((int)AudioManager.SFXClips.ZoomIn);
 				}
 				else if (!infoShown && testing && !touchDetector.GetComponent<MeshRenderer>().sharedMaterial.Equals(correctMaterial) && !touchDetector.GetComponent<MeshRenderer>().sharedMaterial.Equals(incorrectMaterial))
 				{
 					if (AnswerQuestion(touchDetector.transform.parent.parent.GetComponent<StateController>()))
 					{
+						AudioManager.instance.PlayOneShot((int)AudioManager.SFXClips.Correct);
 						if (currentQuestion == 51)
 						{
 							bool gotAnswerRightFirstTime = true;
@@ -300,7 +303,6 @@ public class USAController : MonoBehaviour
 							if (gotAnswerRightFirstTime)
 							{
 								correctAnswers++;
-								Debug.Log(correctAnswers);
 							}
 
 							switch (currentTestType)
@@ -316,14 +318,14 @@ public class USAController : MonoBehaviour
 									if (correctAnswers > PlayerPrefs.GetInt("CapitalTestScore"))
 									{
 										PlayerPrefs.SetInt("CapitalTestScore", correctAnswers);
-										nameTestScore.text = "" + correctAnswers;
+										capitalTestScore.text = "" + correctAnswers;
 									}
 									break;
 								case TestType.Flag:
 									if (correctAnswers > PlayerPrefs.GetInt("FlagTestScore"))
 									{
 										PlayerPrefs.SetInt("FlagTestScore", correctAnswers);
-										nameTestScore.text = "" + correctAnswers;
+										flagTestScore.text = "" + correctAnswers;
 									}
 									break;
 								default:
@@ -354,7 +356,6 @@ public class USAController : MonoBehaviour
 							if (gotAnswerRightFirstTime)
 							{
 								correctAnswers++;
-								Debug.Log(correctAnswers);
 							}
 
 							switch (currentTestType)
@@ -370,14 +371,14 @@ public class USAController : MonoBehaviour
 									if (correctAnswers > PlayerPrefs.GetInt("CapitalTestScore"))
 									{
 										PlayerPrefs.SetInt("CapitalTestScore", correctAnswers);
-										nameTestScore.text = "" + correctAnswers;
+										capitalTestScore.text = "" + correctAnswers;
 									}
 									break;
 								case TestType.Flag:
 									if (correctAnswers > PlayerPrefs.GetInt("FlagTestScore"))
 									{
 										PlayerPrefs.SetInt("FlagTestScore", correctAnswers);
-										nameTestScore.text = "" + correctAnswers;
+										flagTestScore.text = "" + correctAnswers;
 									}
 									break;
 								default:
@@ -387,6 +388,7 @@ public class USAController : MonoBehaviour
 					}
 					else
 					{
+						AudioManager.instance.PlayOneShot((int)AudioManager.SFXClips.Incorrect);
 						// Set color the red.
 						touchDetector.GetComponent<MeshRenderer>().material = incorrectMaterial;
 					}
@@ -531,7 +533,8 @@ public class USAController : MonoBehaviour
 	/// <summary>
 	/// Hides the info UI.
 	/// </summary>
-	public void InfoHide()
+	/// <param name="playSound">True when you want a sound to play.</param>
+	public void InfoHide(bool playSound = false)
 	{
 		infoShown = false;
 		infoAnimator.Play("InfoHide");
@@ -548,6 +551,11 @@ public class USAController : MonoBehaviour
 				stateController.PlayAnimation("Maximize", 2);
 			}
 		}
+
+		if (playSound)
+		{
+			AudioManager.instance.PlayOneShot((int)AudioManager.SFXClips.ZoomOut);
+		}
 	}
 
 	/// <summary>
@@ -555,6 +563,7 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	public void	TurnOnNames()
 	{
+		AudioManager.instance.PlayOneShot((int)AudioManager.SFXClips.Button);
 		nameToggleOn.gameObject.SetActive(true);
 		nameToggleOff.gameObject.SetActive(false);
 		abbreviationToggleOff.gameObject.SetActive(true);
@@ -588,6 +597,7 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	public void TurnOffNames()
 	{
+		AudioManager.instance.PlayOneShot((int)AudioManager.SFXClips.Button);
 		nameToggleOn.gameObject.SetActive(false);
 		nameToggleOff.gameObject.SetActive(true);
 
@@ -604,6 +614,7 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	public void TurnOnAbbreviations()
 	{
+		AudioManager.instance.PlayOneShot((int)AudioManager.SFXClips.Button);
 		nameToggleOn.gameObject.SetActive(false);
 		nameToggleOff.gameObject.SetActive(true);
 		abbreviationToggleOff.gameObject.SetActive(false);
@@ -637,6 +648,7 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	public void TurnOffAbbreviations()
 	{
+		AudioManager.instance.PlayOneShot((int)AudioManager.SFXClips.Button);
 		abbreviationToggleOn.gameObject.SetActive(false);
 		abbreviationToggleOff.gameObject.SetActive(true);
 
@@ -653,6 +665,7 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	public void TurnOnCapitals()
 	{
+		AudioManager.instance.PlayOneShot((int)AudioManager.SFXClips.Button);
 		capitalToggleOn.gameObject.SetActive(true);
 		capitalToggleOff.gameObject.SetActive(false);
 
@@ -669,6 +682,7 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	public void TurnOffCapitals()
 	{
+		AudioManager.instance.PlayOneShot((int)AudioManager.SFXClips.Button);
 		capitalToggleOn.gameObject.SetActive(false);
 		capitalToggleOff.gameObject.SetActive(true);
 
@@ -685,6 +699,7 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	public void TestName()
 	{
+		AudioManager.instance.PlayOneShot((int)AudioManager.SFXClips.Button);
 		StartCoroutine(StartTesting(TestType.Name));
 	}
 
@@ -693,6 +708,7 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	public void TestCapital()
 	{
+		AudioManager.instance.PlayOneShot((int)AudioManager.SFXClips.Button);
 		StartCoroutine(StartTesting(TestType.Capital));
 	}
 
@@ -701,13 +717,15 @@ public class USAController : MonoBehaviour
 	/// </summary>
 	public void TestFlag()
 	{
+		AudioManager.instance.PlayOneShot((int)AudioManager.SFXClips.Button);
 		StartCoroutine(StartTesting(TestType.Flag));
 	}
 
 	/// <summary>
 	/// Stops the current test.
 	/// </summary>
-	public void StopTest()
+	/// <param name="playSound">True if you want a sound to play.</param>
+	public void StopTest(bool playSound = false)
 	{
 		switch (currentTestType)
 		{
@@ -760,6 +778,10 @@ public class USAController : MonoBehaviour
 		foreach (TouchDetector touchDetector in touchDetectors)
 		{
 			touchDetector.GetComponent<MeshRenderer>().material = stateMaterial;
+		}
+		if (playSound)
+		{
+			AudioManager.instance.PlayOneShot((int)AudioManager.SFXClips.Button);
 		}
 	}
 	#endregion
