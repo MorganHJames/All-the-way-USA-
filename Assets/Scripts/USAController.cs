@@ -149,7 +149,7 @@ public class USAController : MonoBehaviour
 	/// <summary>
 	/// The current test type.
 	/// </summary>
-	private TestType currentTestType = TestType.None;
+	private TestType currentTestType;
 
 	/// <summary>
 	/// The different test types.
@@ -158,8 +158,7 @@ public class USAController : MonoBehaviour
 	{
 		Name,
 		Capital,
-		Flag,
-		None
+		Flag
 	}
 
 	/// <summary>
@@ -285,26 +284,105 @@ public class USAController : MonoBehaviour
 				{
 					if (AnswerQuestion(touchDetector.transform.parent.parent.GetComponent<StateController>()))
 					{
-						// Set color to green.
-						touchDetector.GetComponent<MeshRenderer>().material = correctMaterial;
-
-						bool gotAnswerRightFirstTime = true;
-
-						int count = 0;
-
-						foreach (TouchDetector touchDetector1 in touchDetectors)
+						if (currentQuestion == 51)
 						{
-							count++;
-							if (touchDetector1.GetComponent<MeshRenderer>().sharedMaterial.Equals(incorrectMaterial))
+							bool gotAnswerRightFirstTime = true;
+
+							foreach (TouchDetector touchDetector1 in touchDetectors)
+							{
+								if (touchDetector1.GetComponent<MeshRenderer>().sharedMaterial.Equals(incorrectMaterial))
+								{
+									touchDetector1.GetComponent<MeshRenderer>().material = stateMaterial;
+									gotAnswerRightFirstTime = false;
+								}
+							}
+
+							if (gotAnswerRightFirstTime)
+							{
+								correctAnswers++;
+								Debug.Log(correctAnswers);
+							}
+
+							switch (currentTestType)
+							{
+								case TestType.Name:
+									if (correctAnswers > PlayerPrefs.GetInt("NameTestScore"))
+									{
+										PlayerPrefs.SetInt("NameTestScore", correctAnswers);
+										nameTestScore.text = "" + correctAnswers;
+									}
+									break;
+								case TestType.Capital:
+									if (correctAnswers > PlayerPrefs.GetInt("CapitalTestScore"))
+									{
+										PlayerPrefs.SetInt("CapitalTestScore", correctAnswers);
+										nameTestScore.text = "" + correctAnswers;
+									}
+									break;
+								case TestType.Flag:
+									if (correctAnswers > PlayerPrefs.GetInt("FlagTestScore"))
+									{
+										PlayerPrefs.SetInt("FlagTestScore", correctAnswers);
+										nameTestScore.text = "" + correctAnswers;
+									}
+									break;
+								default:
+									break;
+							}
+
+							foreach (TouchDetector touchDetector1 in touchDetectors)
 							{
 								touchDetector1.GetComponent<MeshRenderer>().material = stateMaterial;
-								gotAnswerRightFirstTime = false;
 							}
 						}
-
-						if (gotAnswerRightFirstTime)
+						else
 						{
-							correctAnswers++;
+							// Set color to green.
+							touchDetector.GetComponent<MeshRenderer>().material = correctMaterial;
+
+							bool gotAnswerRightFirstTime = true;
+
+							foreach (TouchDetector touchDetector1 in touchDetectors)
+							{
+								if (touchDetector1.GetComponent<MeshRenderer>().sharedMaterial.Equals(incorrectMaterial))
+								{
+									touchDetector1.GetComponent<MeshRenderer>().material = stateMaterial;
+									gotAnswerRightFirstTime = false;
+								}
+							}
+
+							if (gotAnswerRightFirstTime)
+							{
+								correctAnswers++;
+								Debug.Log(correctAnswers);
+							}
+
+							switch (currentTestType)
+							{
+								case TestType.Name:
+									if (correctAnswers > PlayerPrefs.GetInt("NameTestScore"))
+									{
+										PlayerPrefs.SetInt("NameTestScore", correctAnswers);
+										nameTestScore.text = "" + correctAnswers;
+									}
+									break;
+								case TestType.Capital:
+									if (correctAnswers > PlayerPrefs.GetInt("CapitalTestScore"))
+									{
+										PlayerPrefs.SetInt("CapitalTestScore", correctAnswers);
+										nameTestScore.text = "" + correctAnswers;
+									}
+									break;
+								case TestType.Flag:
+									if (correctAnswers > PlayerPrefs.GetInt("FlagTestScore"))
+									{
+										PlayerPrefs.SetInt("FlagTestScore", correctAnswers);
+										nameTestScore.text = "" + correctAnswers;
+									}
+									break;
+								default:
+									break;
+							}
 						}
 					}
 					else
@@ -386,8 +464,6 @@ public class USAController : MonoBehaviour
 			case TestType.Flag:
 				testAnimator.Play("ShowFlag", 1);
 				break;
-			case TestType.None:
-				break;
 			default:
 				break;
 		}
@@ -438,8 +514,6 @@ public class USAController : MonoBehaviour
 					break;
 				case TestType.Flag:
 					flagTest.sprite = correctStateController.stateInfo.flag;
-					break;
-				case TestType.None:
 					break;
 				default:
 					break;
@@ -638,36 +712,17 @@ public class USAController : MonoBehaviour
 		switch (currentTestType)
 		{
 			case TestType.Name:
-				if (correctAnswers > PlayerPrefs.GetInt("NameTestScore"))
-				{
-					PlayerPrefs.SetInt("NameTestScore", correctAnswers);
-					nameTestScore.text = "" + correctAnswers;
-				}
 				testAnimator.Play("HideText", 1);
 				break;
 			case TestType.Capital:
-				if (correctAnswers > PlayerPrefs.GetInt("CapitalTestScore"))
-				{
-					PlayerPrefs.SetInt("CapitalTestScore", correctAnswers);
-					nameTestScore.text = "" + correctAnswers;
-				}
 				testAnimator.Play("HideText", 1);
 				break;
 			case TestType.Flag:
-				if (correctAnswers > PlayerPrefs.GetInt("FlagTestScore"))
-				{
-					PlayerPrefs.SetInt("FlagTestScore", correctAnswers);
-					nameTestScore.text = "" + correctAnswers;
-				}
 				testAnimator.Play("HideFlag", 1);
-				break;
-			case TestType.None:
 				break;
 			default:
 				break;
 		}
-
-		currentTestType = TestType.None;
 
 		Invoke("TurnOffTesting", 0.25f);
 		testAnimator.Play("StopTest");
